@@ -1,5 +1,5 @@
 <?php
-include('usuario.php');
+/* include('usuario.php'); */
 if(isset($_POST['submit'])){
 
     if(empty($name)){
@@ -7,7 +7,7 @@ if(isset($_POST['submit'])){
         
     }
     else{
-        if(strlen($name)> 15){
+        if(strlen($name)> 10){
             echo"<script> alert(' very long name');</script>";
 
         }
@@ -18,17 +18,14 @@ if(isset($_POST['submit'])){
         
     }
     else{
-        if(strlen($password) < 6){
-            echo"<script> alert(' 6 minimo');</script>";
+        if(!preg_match('`[0-9]`',$password)){
+            echo"<script> alert(' must have a number');</script>";
 
         }
-        if(strlen($password) > 16){
-            echo"<script> alert(' 16 maximo');</script>";
+        if(!preg_match('`[a-z]`',$password)){
+            echo"<script> alert('must have a letter');</script>";
             
          }
-         if(!preg_match('`[a-z]`',$password)){
-            echo"<script> alert(' al menos una mayuscula');</script>";
-            
-         }
+         
     }
 }

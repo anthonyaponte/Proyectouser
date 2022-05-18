@@ -1,29 +1,28 @@
 <?php
-/* include('usuario.php'); */
 if(isset($_POST['submit'])){
 
     if(empty($name)){
-        echo"<script> alert('add your name');</script>";
+        echo"add your name";
         
     }
     else{
         if(strlen($name)> 10){
-            echo"<script> alert(' very long name');</script>";
+            echo"very long name";
 
         }
     }
 
     if(empty($password)){
-        echo" <script> alert('add your password');</script>";
+        echo"add your password";
         
     }
     else{
         if(!preg_match('`[0-9]`',$password)){
-            echo"<script> alert(' must have a number');</script>";
+            echo"must have a number";
 
         }
         if(!preg_match('`[a-z]`',$password)){
-            echo"<script> alert('must have a letter');</script>";
+            echo"must have a letter";
             
          }
          

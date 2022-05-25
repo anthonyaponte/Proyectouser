@@ -1,4 +1,3 @@
-
 <!Doctype html>
 <html lang="en">
   
@@ -9,7 +8,7 @@
   <div class="container">
     <div class="border  border-auto  m-5 d-flex justify-content-center align-items-center" style="height: 450px;">
     <div style="width: 300px; height: 300px;">
-    <h1>Update user </h1>
+    <h1>Delete user </h1>
     <form id="update"  action=""  method="POST">
     <div class="form-group">
         <label for="exampleInputPassword1">Name</label>
@@ -17,7 +16,7 @@
         <input type="text" class="form-control" name="nameu" value="" id="fName" placeholder="Name">
         <div class="m-1"> 
  
-      <input type="submit" name="Update" class="submit btn btn-success" value="Search" id="submit_data" />
+      <input type="submit" name="namel" class="submit btn btn-success" value="Search" id="submit_data" />
      
       </div>
         
@@ -47,28 +46,25 @@ if($_POST){
     
   
     
-      <form id="update_form"  action="actualizar.php"  method="POST">
+      <form id="update_form"  action="delete.php"  method="POST">
   <fieldset>
  
     
     <div class="form-group">
         <label for="exampleInputPassword1">Name</label>
         <label for="fName"></label>
-        <input type="text" class="form-control" name="namea" value="<?php print($row->name) ?>" id="fName" placeholder="Name">
+        <input type="text" class="form-control" name="namel" value="<?php print($row->name) ?>" id="fName" placeholder="Name">
     </div>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="text" class="form-control" value="<?php print($row->password) ?>" name="passworda" id="password" placeholder="Password">
-    </div>
+    
     
         <div class="m-1"> 
  
-      <input type="submit" name="Update" class="submit btn btn-success" value="Update" id="submit_data" />
+      <input type="submit" name="delete" class="submit btn btn-success" value="Delete" id="submit_data" />
      
       </div>
 
       
-     
+
 
       </div>
   </fieldset>

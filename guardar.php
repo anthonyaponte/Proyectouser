@@ -6,11 +6,11 @@ $password=$_POST['password'];
 $conn="INSERT INTO usuario (name,password) VALUES('$name','$password')";
 $res= mysqli_query($sql,$conn);
 if($res){
-    echo"<script> alert(' user add exitoso');</script>";
+    echo"user add :)";
 
 }
 else{
-    echo"<script> alert(' error al insertar');</script>";
+    echo"user add fail :(";
 }
 
 } 
